@@ -36,19 +36,18 @@ namespace WPFSampleApp
 
         private IProjectRepository GetProjectsRepository()
         {
-            //return new ProjectRepository(
-            //    ConfigurationManager.AppSettings["authBaseUrl"],
-            //    ConfigurationManager.AppSettings["projectsBaseUrl"],
-            //    new APICredentials()
-            //    {
-            //        Username = ConfigurationManager.AppSettings["upgradeUsername"],
-            //        Password = ConfigurationManager.AppSettings["upgradePassword"]
-            //    }
-            //);
-
-            // or
-
-            return new ProjectRepository();
+           return new ProjectRepository(
+                new Options()
+                {
+                    APICredentials = new APICredentials()
+                    {
+                        Username = ConfigurationManager.AppSettings["upgradeUsername"],
+                        Password = ConfigurationManager.AppSettings["upgradePassword"]
+                    },
+                    AuthBaseUrl = ConfigurationManager.AppSettings["authBaseUrl"],
+                    ProjectBaseUrl = ConfigurationManager.AppSettings["projectsBaseUrl"]
+                }
+            );
         }
     }
 }
