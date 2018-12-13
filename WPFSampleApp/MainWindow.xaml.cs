@@ -32,6 +32,10 @@ namespace WPFSampleApp
             {
                 AutoUpdater.Start(latestProjectOnServer.AutoUpdaterXMLPath);
             }
+            else
+            {
+                MessageBox.Show("This project is up to date!");
+            }
         }
 
         private IProjectRepository GetProjectsRepository()
