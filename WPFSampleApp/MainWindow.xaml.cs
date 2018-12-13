@@ -1,4 +1,4 @@
-﻿using AutoUpdaterDotNET;
+using AutoUpdaterDotNET;
 using System;
 using System.Configuration;
 using System.Reflection;
@@ -20,7 +20,7 @@ namespace WPFSampleApp
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            textblockVersionNumber.Text = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            textblockVersionNumber.Text = "Version Number: " + Assembly.GetExecutingAssembly().GetName().Version.ToString();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -40,18 +40,18 @@ namespace WPFSampleApp
 
         private IProjectRepository GetProjectsRepository()
         {
-           return new ProjectRepository(
-                new Options()
-                {
-                    APICredentials = new APICredentials()
-                    {
-                        Username = ConfigurationManager.AppSettings["upgradeUsername"],
-                        Password = ConfigurationManager.AppSettings["upgradePassword"]
-                    },
-                    AuthBaseUrl = ConfigurationManager.AppSettings["authBaseUrl"],
-                    ProjectBaseUrl = ConfigurationManager.AppSettings["projectsBaseUrl"]
-                }
-            );
+            return new ProjectRepository(
+                 new Options()
+                 {
+                     APICredentials = new APICredentials()
+                     {
+                         Username = ConfigurationManager.AppSettings["upgradeUsername"],
+                         Password = ConfigurationManager.AppSettings["upgradePassword"]
+                     },
+                     AuthBaseUrl = ConfigurationManager.AppSettings["authBaseUrl"],
+                     ProjectBaseUrl = ConfigurationManager.AppSettings["projectsBaseUrl"]
+                 }
+             );
         }
     }
 }
