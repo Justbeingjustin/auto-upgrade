@@ -3,8 +3,8 @@ using System;
 using System.Configuration;
 using System.Reflection;
 using System.Windows;
-using Upgrades.Models;
-using Upgrades.Services;
+using WPFSampleApp.Models;
+using WPFSampleApp.Services;
 
 namespace WPFSampleApp
 {

@@ -1,6 +1,6 @@
-﻿using Upgrades.Models;
+﻿using WPFSampleApp.Models;
 
-namespace Upgrades.Services
+namespace WPFSampleApp.Services
 {
     public interface IProjectRepository
     {

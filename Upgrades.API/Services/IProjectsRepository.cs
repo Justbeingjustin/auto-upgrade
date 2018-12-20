@@ -11,5 +11,13 @@ namespace Upgrades.API.Services
         Task<IEnumerable<Project>> GetProjectsAsync();
 
         Task<Project> GetProjectByIdAsync(long projectId);
+
+        void DeleteProject(Project project);
+
+        void AddProject(Project projectToAdd);
+
+        bool ProjectExists(long projectId);
+
+        Task<bool> SaveChangesAsync();
     }
 }

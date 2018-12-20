@@ -1,4 +1,4 @@
-﻿namespace Upgrades.Models
+﻿namespace WPFSampleApp.Models
 {
     public class Project
     {

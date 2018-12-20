@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Upgrades.Models
+namespace WPFSampleApp.Models
 {
     public class APICredentials
     {

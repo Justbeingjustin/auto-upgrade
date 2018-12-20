@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 using RestSharp;
-using Upgrades.Models;
+using WPFSampleApp.Models;
 
-namespace Upgrades.Services
+namespace WPFSampleApp.Services
 {
     public class ProjectRepository : IProjectRepository
     {
